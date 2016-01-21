@@ -1,4 +1,5 @@
 CompSci 308 : RPS Design
+NetIDs: smk44, abz3, at200, rss44
 ===================
 
 > This is the link to the Lab Description: 
