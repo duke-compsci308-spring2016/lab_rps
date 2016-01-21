@@ -10,7 +10,7 @@ Initial Design
 ###Class 1 - Game Class
 
 * HashMap of Strings to HashSet<String>
-	- map.get(choice) returns a HashSet of Strings that represent the RPS weapons that this choice beats.
+	- loseSet.get(choice) returns a HashSet of Strings that represent the RPS weapons that this choice beats.
 
 * getWinner() Method that takes in 2 Strings that represent choices
 	- if statements use HashMap to check if String choice1 occurs in map.get(choice2) or vice versa
