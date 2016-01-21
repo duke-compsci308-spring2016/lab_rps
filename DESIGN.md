@@ -29,9 +29,11 @@ CompSci 308 : RPS Design
 
 # Player
 Manages individual player actions
+
 ### Data
   * `private Weapon activeWeapon;`
   * `private int score;`
+
 ### Methods
   * `public Weapon getActiveWeapon;`
   * `public void setActiveWeapon;`
