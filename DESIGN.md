@@ -11,9 +11,11 @@ CompSci 308 : RPS Design
 
 ### Data
   * `private int index; // must be unique`
+  * `private String name;`
 
 ### Methods
   * `public int getIndex();`
+  * `public String getName();`
 
 # WeaponManager
   Coordinates the relationships between Weapons
@@ -23,9 +25,12 @@ CompSci 308 : RPS Design
 
 ### Methods
   * `public boolean score(Weapon w1, Weapon w2);`
+  * `public int getNumWeapons();`
 
 # Main
   Provide overarching program structure, connecting all the little pieces
+
+### Methods
 
 # Player
 Manages individual player actions
