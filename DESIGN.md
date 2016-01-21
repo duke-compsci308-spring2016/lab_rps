@@ -1,8 +1,4 @@
-CompSci 308 : RPS Design
-===================
-
-> This is the link to the Lab Description: 
-[Lab - RPS](http://www.cs.duke.edu/courses/compsci308/spring16/classwork/02_design_rps/index.php)
+## Created by Richard Liu (rrl6), Adam Tache (at201), Aaron Newman (agn9)
 
 CRC Design
 =======
