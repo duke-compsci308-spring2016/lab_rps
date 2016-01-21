@@ -4,44 +4,35 @@ CompSci 308 : RPS Design
 > This is the link to the Lab Description: 
 [Lab - RPS](http://www.cs.duke.edu/courses/compsci308/spring16/classwork/02_design_rps/index.php)
 
-Initial Design
-=======
+#Design
+####By Blake Kaplan (bjk20), Patrick Grady (plg5), Bobby Wang (bcw22), and Justin Bergkamp (jtb43)
 
-###Class 1
+###Class: Weapon
 
-* Bullets are made with asterisks
-
-1. You can also order things with numbers
-
-
-###Class 2
-
-
-
-CRC Design
-=======
-
-###Class 1
-
-
-###Class 2
-
-You can add images as well:
-
-![This is cool, too bad you can't see it](crc-example.png "Our CRC cards")
-
-
-Use Cases
-=======
-
-You can put blocks of code in here like this:
+* A class that can be instantiated for any weapon based on what is fed into the constructor
+* Methods:
 ```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
-    }
+public void addBeats(Weapon beatWeapon)
+public void addAllBeats(List<Weapon> beatWeapons)
+public void addLoss(Weapon loseWeapon)
+public void addAllLosses(List<Weapon> loseWeapons)
 ```
 
+###Class: Player
+
+* Represents each game player
+* Will be able to determine which weapon it would like to throw
+* Methods:
+```java
+public Weapon throw()
+public int getScore()
+```
+
+###Class: Game
+* The central game class
+* Will have to have an initialization method(s) where it properly configures which weapons beat which other weapons
+* Controls the GUI
+* Methods:
+```java
+public void start();
+```
