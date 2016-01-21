@@ -23,7 +23,7 @@ CRC Design
 ####Methods
 
 * Find relationship to another weapon
-===
+
 
 ###Game
 
@@ -40,7 +40,6 @@ CRC Design
 * Insert new weapon
 * Start new round
 
-===
 
 ###Round
 
@@ -74,9 +73,10 @@ CRC Design
 
 * Update weapon (and return boolean when completed)
 
-==================
+
 
 Use Cases
+===========
 
 ### Playing the game
 
