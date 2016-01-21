@@ -12,7 +12,7 @@ CompSci 308 : RPS Design
 ### Game class 
 * constructor will load file and populate hash maps
 * variables:
-    * private Map<String, Set<String>> weaponBeats;
+    * private Map\<String, Set\<String\>\> weaponBeats;
     * private Map<String, Set<String>> weaponLosesTo;
     * private User myUser;
     * private final AI myAI;
