@@ -31,7 +31,7 @@ Initial Design
 	- reads in stuff from file 
 	- creates the RPS Choice objects and adds to HashMap
 	- initializes new instance of Game Class with HashMap
-	- game.begin()
+	- game.begin() starts the game loop
 
 
 
