@@ -35,8 +35,14 @@ public Weapon pickWeapon()
 
 //Gets the players current score
 public int getScore()
+
+//Returns a boolean expressing whether or not the player beats the given other player
 public boolean doesBeat(Player otherPlayer)
+
+//Returns the player's current played weapon
 public Weapon getCurrentWeapon()
+
+//Changes the player's score
 public void setScore(int score)
 ```
 Instance Variables:
@@ -52,9 +58,34 @@ Methods:
 ```java
 //Starts the game and generates the GUI
 public void start()
+
+//Adds a new weapon to the game
+public void addWeapon(Weapon newWeapon)
 ```
 
 Instance Variables:
 `int roundsElapsed`
 `List<Player> players`
 `List<Weapon> weapons`
+
+#Use Cases
+
+#A new game is started with two players, their scores are reset to 0.
+
+`Game.begin();`
+
+#A player chooses his RPS "weapon" with which he wants to play for this round.
+
+`Player.pickWeapon();`
+
+#Given two players' choices, one player wins the round, and their scores are updated.
+
+`Player.doesBeat(Player otherPlayer);`
+
+#A new choice is added to an existing game and its relationship to all the other choices is updated.
+
+`Game.addWeapon(Weapon newWeapon);`
+
+#A new game is added to the system, with its own relationships for its all its "weapons".
+
+`Game.begin();`
