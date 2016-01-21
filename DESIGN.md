@@ -9,19 +9,19 @@ Initial Design
 
 # Class List
 
-* ## Weapon
+## Weapon
   This class stores each Weapon's unique identifier
-  * ### Data
-    * `private int index; // must be unique`
-  * ### Methods
-    * `public int getIndex();`
-* ## WeaponManager
+### Data
+  * `private int index; // must be unique`
+### Methods
+  * `public int getIndex();`
+## WeaponManager
   Coordinates the relationships between Weapons
-  * ### Data
-    * private final Matrix<boolean> relationships;
-  * ### Methods
-    * public boolean score(Weapon w1, Weapon w2);
-* ## Main
+### Data
+  * `private final Matrix<boolean> relationships;`
+### Methods
+  * `public boolean score(Weapon w1, Weapon w2);`
+## Main
   Provide overarching program structure, connecting all the little pieces
 
 
