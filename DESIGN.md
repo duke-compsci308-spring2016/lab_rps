@@ -34,10 +34,24 @@ NetIDs: smk44, abz3, at200, rss44
 CRC Design
 =======
 
-###Class 1
+###public class Main
+	* void start() 
 
-
-###Class 2
+###AI class
+	* private List<String>
+	* public void chooseMove()
+	* public void updateData(String Move)
+###Game class
+	* private void init()
+	* private void loadWeaponInfo
+	* private void createPlayer()
+	* public void updateUI()
+	* private void scheduleTimeTurner()
+	* private final Map\<String, Set\<String\>\> weaponBeats
+	* private final Map\<String, Set\<String\>\> loseTo
+	* private user myUser
+	* private final AI myAI
+	* prvate Timer myTurnTimer
 
 You can add images as well:
 
