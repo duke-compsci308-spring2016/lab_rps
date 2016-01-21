@@ -7,14 +7,35 @@ CompSci 308 : RPS Design
 Initial Design
 =======
 
-###Class 1
+###Class 1 - Game Class
 
-* Bullets are made with asterisks
+* HashSet of Objects (RPS Choice Objects)
 
-1. You can also order things with numbers
+* Method that takes in 2 RPS Choice Objects, returns a String for which RPS Choice wins or blank String if they tie.
+
+* Constructor takes in HashSet of RPS Objects
+
+* Step method that takes user input, 
 
 
-###Class 2
+###Class 2 - Main Class
+
+* Main method 
+	- reads in stuff from file 
+	- creates the RPS Choice objects
+	- adds them HashSet 
+	- creates new instance of Game Class.
+
+
+###Class 3 - RPS Choice Class
+
+* String for name
+
+* HashSet of Strings for RPS Choices that it beats
+
+* Getters and Setters for name and HashSet
+
+* Constructor - takes in a name and ArrayList of Strings
 
 
 
