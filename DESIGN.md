@@ -39,6 +39,7 @@ CRC Design
 
 * Insert new weapon
 * Start new round
+
 ===
 
 ###Round
@@ -59,6 +60,7 @@ CRC Design
 * Need to determine winner
 * Need to query both players for weapons
 * Need to increment score
+
 ===
 
 ###Player
