@@ -28,9 +28,10 @@ Initial Design
 		* This integer determines what the "best of" is
 		* Store integer as an instance variable
 		* Is a void method 
+	
 	* Generate AI weapon (4)
 
-	* Determine winner(5) 
+	* Determine winnerRound(5) 
 		* Parameter: String weaponPlayer, String weaponComputer
 		* Method takes in String weapon and compares it to the keySet of the HashMap of weapons
 		* Uses HashMap.get(weaponPlayer) to return corresponding ArrayList
@@ -38,7 +39,10 @@ Initial Design
 		* Use value return from Check Weapon method 
 		* return boolean, true if player won, false if player lost 
 
-	* 
+	* Update player score
+		*	Parameter: boolean playerWin
+		* if playerWin -> playerScore++
+		* else computerScore++
 
 	* Check moves to see if there is a tie
 		* Parameters: String weaponPlayer, String weaponComputer
@@ -52,14 +56,22 @@ Initial Design
 
 	
 	* Returns user score and determines if game is over
-
-1. You can also order things with numbers
+		* Parameter: User score
+		* if playerScore == ceil(roundNum / 2) 
+		* Call getWinner method in main
+		* else, nothing happens 
 
 
 ###Class 2 - Main 
 
 * Methods
 	*  Prompt user for weapon and check for weapon validity 
+
+	* Return winner of round
+		*	Print the winner of the round
+
+	* Return winner of the set
+		* Print the winner of the set
 
 
 CRC Design
@@ -79,13 +91,28 @@ Use Cases
 =======
 
 You can put blocks of code in here like this:
+Use case 2
 ```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
-    }
+public class RPSGame{
+	public ArrayList<String> readFile(InputStream input) {
+		return ArrayList<String> dataList;
+	}
+	public HashMap<String, ArrayList<String>> parseData(ArrayList<String> list) {
+		return HashMap<String, ArrayList<String>>;
+	}
+}
+
+public class RPSMain{
+    public HashMap<String, HashSet> loseSet;
+    public static void main(String[] args){
+    	RPSGame myGame = new RPSGame();
+    	ArrayList<String> dataList = myGame.readFile(input.txt);
+    	loseSet = myGame.parseData(dataList);
+    	String weaponPlayer = myGame.promptUser();
+	}
+	public promptUser(){
+		return weaponPlayer;
+	}
+}
 ```
 
