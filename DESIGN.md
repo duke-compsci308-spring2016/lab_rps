@@ -1,47 +1,42 @@
-CompSci 308 : RPS Design
+RCP
 ===================
 
-> This is the link to the Lab Description: 
-[Lab - RPS](http://www.cs.duke.edu/courses/compsci308/spring16/classwork/02_design_rps/index.php)
-
-Initial Design
-=======
-
-###Class 1
-
-* Bullets are made with asterisks
-
-1. You can also order things with numbers
 
 
-###Class 2
+Class 1 - Main
+----------
+Implements the game
 
 
+Class 2 - Relationship
+----------
+private Map<Object> relation
 
-CRC Design
-=======
-
-###Class 1
-
-
-###Class 2
-
-You can add images as well:
-
-![This is cool, too bad you can't see it](crc-example.png "Our CRC cards")
+public void readData(Collection<String> data)
+public int beat(Object o1, Object o2): check if o1 beats o2
+public void addWeapon( Collection<Object> Object A, Object O, Collection<Object> B): add a new weapon O that gets beaten by A and beats B
 
 
-Use Cases
-=======
+Class 3 - Players
+----------
+private double scores
+private String weapon
+private String name
 
-You can put blocks of code in here like this:
-```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
-    }
-```
+public double getScore()
+public void setScore()
+public Object getWeapon()
+public void changeWeapon(Object o)
+
+
+Class 4 - PRSGame
+----------
+private Relationship myRelationship
+private Players p1,p2
+
+public void init() //initialize the game 
+public void round() 
+public void end()
+public Player getWinner()
+public void restart()
 
