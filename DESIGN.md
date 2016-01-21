@@ -10,26 +10,39 @@ Initial Design
 ###Class 1: Game
 
 * Contains Player and WeaponList objects
+
 * Contains methods that:
+
 1. Reads an input file that includes a list of weapons and what each beats
+
 2. Initializes players by creating a new instance of Player class
+
 3. Starts a new game between two players
+
 4. Allows players to choose their weapon, which is stored in that Player's player.weapon
+
 5. Plays a round between two players by checking the players' weapon matchup in a WeaponList outcome matrix and increments the winner's score
 
 
 ###Class 2: Player
 
 * Contains the name, score, and weapon choice of a player
+
 * Contains methods that:
+
 1. Resets the score of the player
+
 2. Increments the score of the player
+
 3. Sets the weapon the player will use
 
 
 ###Class 3: WeaponList
+
 * Contains a list of weapons and an outcome matrix of all the different pairings of weapons
+
 * Contains methods that:
+
 1. Adds a new weapon to the list of weapons and updates the outcome matrix based on a set of the weapons it beats
 
 
@@ -37,30 +50,47 @@ CRC Design
 =======
 
 ###Class 1: Game
+
 * Player player1
+
 * Player player2
+
 * WeaponList wl
 
+
 * newGame() -> returns void
+
 * initializePlayer(String name) ->returns Player
+
 * readFile(File f) -> returns WeaponList
+
 * playRoundAndUpdateScore(Player player1, Player player2) -> returns void
+
 * chooseWeapon(Player player) -> returns void
 
 
 ###Class 2: Player
+
 *String name
+
 *int score
+
 *String weapon
 
+
+
 *resetScore() -> returns void
+
 *incrementScore() -> returns void
+
 *setWeapon(String w) -> returns void
 
 
 ###Class 3: WeaponList
 *ArrayList<String> weapons
+
 *ArrayList<ArrayList<Integer>> outcomeMatrix
+
 
 *addWeapon(string Weapon, Set<String> thingsItBeats) -> returns void
 
