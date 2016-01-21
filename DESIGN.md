@@ -10,16 +10,16 @@ Lab_RPS (CS308 1.21.16)
 High Level Class Overview:
 Public methods (parameters & return value)
 > **Comparator Class:**
-Takes in both player's selection
-Assumes every single hand has to be an object
-the Comparator class takes in two objects, and decides the winner based on the relative value between the two objects through some sort of algorithm. This class will have the compareTo class that will compare the objects accordingly.
+> - Takes in both player's selection
+> - Assumes every single hand has to be an object
+> - the Comparator class takes in two objects, and decides the winner based on the relative value between the two objects through some sort of algorithm. This class will have the compareTo class that will compare the objects accordingly.
 
 
 ---------------------
 
 > **Game Class:**
-Game class generates screen to fit into generate scene method.
-Generate scene method:
+> - Game class generates screen to fit into generate scene method.
+> - Generate scene method:
 takes in current state that we are in 
 begins with splash state
 calls method to call next state
