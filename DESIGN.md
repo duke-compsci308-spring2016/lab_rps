@@ -13,12 +13,14 @@ CRC Design
 ####Attributes
 
 * String myName
-* Set of Weapons beatsMe
-* Set of Weapons iCanBeat
+* Set of Weapons superiorTo
+* Set of Weapons inferiorTo
 
 ####Methods
 
 * Find relationship to another weapon (takes in another weapon, returns boolean)
+* Insert new weapon in superiorTo (void, takes in Weapon)
+* Insert new weapon in inferiorTo (void, takes in Weapon)
 
 
 ###Game
