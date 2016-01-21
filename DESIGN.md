@@ -33,8 +33,6 @@ Initial Design
 
 ###Class 3 - RPS Choice Class
 
-* String for name
-
 * HashSet of Strings for RPS Choices that it beats
 
 * Getters and Setters for name and HashSet
