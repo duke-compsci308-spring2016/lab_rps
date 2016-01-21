@@ -9,22 +9,26 @@ Initial Design
 
 ###Class 1 - Game Class
 
-* HashSet of Objects (RPS Choice Objects)
+* HashMap of Strings to Objects (RPS Choice Objects)
 
-* Method that takes in 2 RPS Choice Objects, returns a String for which RPS Choice wins or blank String if they tie.
+* getWinner() Method that takes in 2 RPS Choice Objects, returns a String for which RPS Choice wins or blank String if they tie.
 
-* Constructor takes in HashSet of RPS Objects
+* Constructor takes in HashMap of RPS Objects
 
-* Step method that takes user input, 
+* begin() method 
+	- Prompts user for two Strings
+	- uses HashMap to find RPS Choice objects
+	- checks which RPS Choice object wins using getWinner()
+	- loops
 
 
 ###Class 2 - Main Class
 
 * Main method 
 	- reads in stuff from file 
-	- creates the RPS Choice objects
-	- adds them HashSet 
-	- creates new instance of Game Class.
+	- creates the RPS Choice objects and adds to HashMap
+	- initializes new instance of Game Class with HashMap
+	- game.begin()
 
 
 ###Class 3 - RPS Choice Class
@@ -35,7 +39,7 @@ Initial Design
 
 * Getters and Setters for name and HashSet
 
-* Constructor - takes in a name and ArrayList of Strings
+* Constructor - takes in a name and HashSet of Strings
 
 
 
