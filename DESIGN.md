@@ -12,10 +12,10 @@ CompSci 308 : RPS Design
 ### Game class 
 * constructor will load file and populate hash maps
 * variables:
-    * private HashMap<String, Array<String>> weaponBeats;
-    * private HashMap<String, Array<String>> weaponLosesTo;
+    * private Map<String, List<String>> weaponBeats;
+    * private Map<String, List<String>> weaponLosesTo;
     * private User myUser;
-    * private AI myAI;
+    * private final AI myAI;
     * private Timer myTurnTimer;
 * methods:
 	* public void init(); call loadWeaponInfo, create player, create AI, prompt user for choice, scheduleTurnTimer
@@ -23,24 +23,12 @@ CompSci 308 : RPS Design
 	* private void createPlayers(); creates user object and AI object
 	* public void updateAI(); update myAI's UsersPastMoves structure
 	* scheduleTurnTimer(); schedules the turn timer, once timer expires have both players' choices show, then schedule new timer and prompt user for choice
-	
+
 ### AI class
-	* private ArrayList<String> UsersPastMoves;
+ 	
+	* private List<String> UsersPastMoves;
 	* chooseMove(); algorithm to choose weapon based on UsersPastMoves
-        
-
-=======
-
-###Class 1
-
-* Bullets are made with asterisks
-
-1. You can also order things with numbers
-
-
-###Class 2
-
-
+	* updateData(String move); updates data structure storing data regarding player's previous moves  
 
 CRC Design
 =======
