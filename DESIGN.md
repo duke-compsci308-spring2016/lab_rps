@@ -9,11 +9,14 @@ Initial Design
 
 ###Class 1 - Game Class
 
-* HashMap of Strings to Objects (RPS Choice Objects)
+* HashMap of Strings to HashSet<String>
+	- map.get(choice) returns a HashSet of Strings that represent the RPS weapons that this choice beats.
 
-* getWinner() Method that takes in 2 RPS Choice Objects, returns a String for which RPS Choice wins or blank String if they tie.
+* getWinner() Method that takes in 2 Strings that represent choices
+	- if statements use HashMap to check if String choice1 occurs in map.get(choice2) or vice versa
+	- returns a String for which RPS Choice wins or blank String if they tie
 
-* Constructor takes in HashMap of RPS Objects
+* Constructor takes in HashMap of Strings to HashSet<String>
 
 * begin() method 
 	- Prompts user for two Strings
@@ -31,13 +34,7 @@ Initial Design
 	- game.begin()
 
 
-###Class 3 - RPS Choice Class
 
-* HashSet of Strings for RPS Choices that it beats
-
-* Getters and Setters for name and HashSet
-
-* Constructor - takes in a name and HashSet of Strings
 
 
 
