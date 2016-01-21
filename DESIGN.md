@@ -95,21 +95,21 @@ Use Cases
 
 ### Name: A new game is started, reset scores to 0
 
-public class Gameplay{
-	private Player player1, player2;
+	public class Gameplay{
+		private Player player1, player2;
 	
-	public void reset() {
-		player1.setScore(0);
-		player2.setScore(0);
+		public void reset() {
+			player1.setScore(0);
+			player2.setScore(0);
+		}
 	}
-}
 
-public class Player{
-	private myScore;
+	public class Player{
+		private myScore;
 	
-	public void setScore(int score) {
-		this.myScore = score;
+		public void setScore(int score) {
+			this.myScore = score;
+		}
+	
 	}
-	
-}
 
