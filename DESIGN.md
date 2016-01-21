@@ -70,22 +70,26 @@ Instance Variables:
 
 #Use Cases
 
-###A new game is started with two players, their scores are reset to 0.
+A new game is started with two players, their scores are reset to 0.
 
 `Game.begin();`
 
-###A player chooses his RPS "weapon" with which he wants to play for this round.
+A player chooses his RPS "weapon" with which he wants to play for this round.
 
 `Player.pickWeapon();`
 
-###Given two players' choices, one player wins the round, and their scores are updated.
+Given two players' choices, one player wins the round, and their scores are updated.
 
 `Player.doesBeat(Player otherPlayer);`
 
-###A new choice is added to an existing game and its relationship to all the other choices is updated.
+A new choice is added to an existing game and its relationship to all the other choices is updated.
 
 `Game.addWeapon(Weapon newWeapon);`
 
-###A new game is added to the system, with its own relationships for its all its "weapons".
+A new game is added to the system, with its own relationships for its all its "weapons".
 
 `Game.begin();`
+
+#CRC Cards
+
+![Our Design CRC Cards](crc-cards.jpg "Our CRC cards")
