@@ -1,4 +1,5 @@
 CompSci 308 : RPS Design
+Team hpb3, can18
 ===================
 
 > This is the link to the Lab Description: 
