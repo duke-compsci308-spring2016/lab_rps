@@ -49,12 +49,28 @@ Use Cases
 
 You can put blocks of code in here like this:
 ```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
+    public class Game {
+	private final Player player1;
+  private final Player player2;
+  private boolean stillGame = true;
+	Game(String name1, String name2) {
+  	player1 = new Player();
+    player2 = new Player();
+    player1.setName(name1);
+    player2.setName(name2);
+    player1.setWins(0);
+    player2.setWins(0);
+    while (stillGame) {
+    	playRound();
+    }
+  }
+  
+  private void playRound() {
+  	// code code code 
+    
+  }
+  
+}
     }
 ```
 
