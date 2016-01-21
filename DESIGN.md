@@ -7,28 +7,36 @@ CompSci 308 : RPS Design
 Initial Design
 =======
 
-###Class 1
+###Class 1: Game
 
-* Bullets are made with asterisks
+* Contains Player and WeaponList objects
+* Contains methods that:
+1. Reads an input file that includes a list of weapons and what each beats
+2. Initializes players by creating a new instance of Player class
+3. Starts a new game between two players
+4. Allows players to choose their weapon, which is stored in that Player's player.weapon
+5. Plays a round between two players by checking the players' weapon matchup in a WeaponList outcome matrix and increments the winner's score
 
-1. You can also order things with numbers
+
+###Class 2: Player
+
+* Contains the name, score, and weapon choice of a player
+* Contains methods that:
+1. Resets the score of the player
+2. Increments the score of the player
+3. Sets the weapon the player will use
 
 
-###Class 2
-
+###Class 3: WeaponList
+* Contains a list of weapons and an outcome matrix of all the different pairings of weapons
+* Contains methods that:
+1. Adds a new weapon to the list of weapons and updates the outcome matrix based on a set of the weapons it beats
 
 
 CRC Design
 =======
-
-###Class 1
-
-
-###Class 2
-
-You can add images as well:
-
-![This is cool, too bad you can't see it](crc-example.png "Our CRC cards")
+(image3.JPG)
+(crc-example.png "Our CRC cards")
 
 
 Use Cases
