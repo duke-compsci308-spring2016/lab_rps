@@ -7,15 +7,38 @@ CompSci 308 : RPS Design
 Initial Design
 =======
 
-###Class 1
+###GameWorld
+'''java
+	private void loadUI()
+	private void startGame()
+ 	private Map<Weapon, Collection<Weapon>> loadWeaponsData(File weaponData)
+ 	private void printAndUpdateResults(Player player1, Player player2) 
+ 	private void newRound()
+	private void endGame()
+	private void reset()
+'''
+* loadUI() is responsible for generating the user interface for the game.
+* loadWeaponsData(File weaponData) is responsible for reading a file of weapons and creating a map with relationships between weapons in the form of a Map.
+* startGame() is responsible for instantiating Players (setting their scores and other stats to zero).
+* printAndUpdateResults(Player player1, Player player2) is responsible for displaying the results between two players and updating their scores.
+* newRound() clears the weapon choices of players.
+* endGame() stops the UI running.
+* reset() reinitializes scores and weapon choices for players (restarts the game without closing the UI).
 
-* Bullets are made with asterisks
 
-1. You can also order things with numbers
+###Weapon
+'''java
+	public Weapon(String name, Collection<Weapon> listOfCanBeat)
+	public int compareTo(Weapon other)
+'''
+* Weapon(String name, Collection<String> listOfCanBeat) is a constructor that initializes a weapon with a name and the list of other weapons it can beat.
+* compareTo(String other) determines whether two weapons are the same or who beats who.
 
-
-###Class 2
-
+###Player
+'''java
+	public Player(int score, Weapon weaponChoice)
+'''
+* Player(int score, Weapon weaponChoice) is a constructor that initializes a weapon with a score and the weapon of choice.
 
 
 CRC Design
