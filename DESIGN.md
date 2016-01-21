@@ -22,7 +22,7 @@ CRC Design
 
 ####Methods
 
-* Find relationship to another weapon
+* Find relationship to another weapon (takes in another weapon, returns boolean)
 
 
 ###Game
@@ -37,15 +37,15 @@ CRC Design
 
 ####Methods
 
-* Insert new weapon
-* Start new round
+* Insert new weapon (void, adds one weapon to legalWeapons, update all relevant relationships)
+* Start new round (returns new Round)
 
 
 ###Round
 
 ####Responsibilities
 
-* Keep track of weapons chosen by both players
+* Keep track of weapons chosen by both players 
 * Determine a winner for the round
 
 ####Atributes
@@ -55,10 +55,10 @@ CRC Design
 
 ####Methods
 
-* Need to determine if both weapons selected
-* Need to determine winner
-* Need to query both players for weapons
-* Need to increment score
+* Need to determine if both weapons selected (returns boolean)
+* Need to determine winner (returns the relationship of player1Weapon to player2Weapon)
+* Need to query both players for weapons (getters for Weapons)
+* Need to increment score (use setter for Game class)
 
 ===
 
