@@ -14,7 +14,8 @@ Player knows its:
 * score
 * name
 * currentWeapon
-Methods: 
+
+Methods- 
 * setWeaponChoice
 
 ###UserPlayer Class
@@ -27,7 +28,8 @@ ComputerPlayer will implement the player class.  It will be for cpu challengers.
 class' capabilities it will need a decision making capability. 
 ComputerPlay has:
 * difficulty
-Methods:
+
+Methods-
 * makeNextMoveDecision
 
 ###Weapon Class
@@ -46,7 +48,8 @@ Methods-
 Initializes the game, passes the input data to the information engine to process and 
 generates a new GamePlay class (depending on whether the players are human or cpu) with the given information
 engine 
-methods:
+
+methods-
 * readInput [gets the input]
 * main method
 
@@ -57,11 +60,12 @@ The game loop will:
 1. Update the player weapon choice
 2. play 
 3. updatePlayer
-Methods:
-shoot [makes a choice on which players' weapon wins] 
-updatePlayer [updates the player state] 
 
-The Game Class will have:
+Methods-
+* shoot [makes a choice on which players' weapon wins] 
+* updatePlayer [updates the player state] 
+
+The GamePlay Class will have:
 * 2 Players (it should be able to handle different type of players; both CPU and User)
 * DataEngine
 
@@ -70,7 +74,8 @@ The Game Class will have:
 
 Loads the input data and creates the algorithm to determine which weapon beats another
 It will contain the instances of the weapons and give out information useful for the GamePlay Class
-Methods:
+
+Methods-
 * generateGraph
 * getWinner (Weapon1, weapon2) [Uses the graph to determine the winner between the two weapons]
 CRC Design
