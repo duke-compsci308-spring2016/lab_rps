@@ -10,7 +10,7 @@ CRC Design
 ###Weapon
 * Defined by the name (ie. "Rock")
 
-####Responsibilitie
+####Responsibilities
 * To keep track of what weapons beat this one
 * To keep track of what weapons this one beats
 
@@ -18,6 +18,9 @@ CRC Design
 * String myName
 * Set<Weapon> beatsMe
 * Set<Weapon> iBeatThem
+
+####Method
+* Find relationship to another weapon
 ===
 
 ###Game
@@ -25,6 +28,15 @@ CRC Design
 ####Attributes
 * Player player1
 * Player player2
+* int player1Score
+* int player2Score
+* Set<Weapon> legalWeapons
+
+####Methods
+* Insert new weapon
+
+###Methods
+* Start new round
 ===
 
 ###Round
@@ -40,40 +52,29 @@ CRC Design
 ####Methods
 * Need to determine if both weapons selected
 * Need to determine winner
-* Need to reset the round
 * Need to query both players for weapons
+* Need to increment score
 ===
 
 ###Player
 
 ####Attributes
+* String myName
 * Weapon selectedWeapon
 
 ####Methods
 * Update weapon (and return boolean when completed)
 
-
-<!-- 
-
-###Class 2
-
-You can add images as well:
-
-![This is cool, too bad you can't see it](crc-example.png "Our CRC cards")
-
+==================
 
 Use Cases
-=======
 
-You can put blocks of code in here like this:
-```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
-    }
-```
+### Playing the game
+1. Start with a Set of Weapons and the relationships between them.
+2. Create a new Game object, update Players in the game, use the relationships.
+3. Create a new round. 
+4. Once both players select their weapons, find the winner. Then appropriately update the score and reset.
 
- -->
+###Inserting a new weapon
+1. Design a Weapon and create the relationships. Add this Weapon to the game legalWeapons.
+2. For all other relevant weapons, add relationship to the new weapon.
