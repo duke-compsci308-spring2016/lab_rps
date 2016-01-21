@@ -71,28 +71,29 @@ CRC Design
 
 ###Class 2: Player
 
-*String name
+* String name
 
-*int score
+* int score
 
-*String weapon
+* String weapon
 
 
 
-*resetScore() -> returns void
+* resetScore() -> returns void
 
-*incrementScore() -> returns void
+* incrementScore() -> returns void
 
-*setWeapon(String w) -> returns void
+* setWeapon(String w) -> returns void
 
 
 ###Class 3: WeaponList
-*ArrayList<String> weapons
 
-*ArrayList<ArrayList<Integer>> outcomeMatrix
+* ArrayList<String> weapons
+
+* ArrayList<ArrayList<Integer>> outcomeMatrix
 
 
-*addWeapon(string Weapon, Set<String> thingsItBeats) -> returns void
+* addWeapon(string Weapon, Set<String> thingsItBeats) -> returns void
 
 
 =======
