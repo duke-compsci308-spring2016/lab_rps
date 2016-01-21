@@ -1,4 +1,5 @@
-CompSci 308 : RPS Design
+CompSci 308 : RPS Design 
+By: David Yan (dwy3) and Srikar Pyda (sp285)
 ===================
 
 > This is the link to the Lab Description: 
