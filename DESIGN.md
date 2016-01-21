@@ -33,7 +33,7 @@ displays win screen
 
 > **Object Class:**
 OO for selecting the move
-name property
+name property. This class has a move method that returns the move name selected.
 
 
 ---------------------
