@@ -7,24 +7,100 @@ CompSci 308 : RPS Design
 Initial Design
 =======
 
-###Class 1
+###Weapon
 
-* Bullets are made with asterisks
+* General class for each weapon, doesn’t store what it beats/what beats it
+* Knows weapon display attributes
 
-1. You can also order things with numbers
+###WeaponSet
 
+* Stores all of the weapons the Player can use
 
-###Class 2
+###Rules
 
+* Rule set decides what beats what- game gives it 2 weapons and it decides on the winner based on its info
 
+###Player
+
+* Creates player, attaches weapon selected, and maintains win/loss for player
+
+###Game
+
+* Runs game after creating x players, uploading data file for game, and populating the weapon set
 
 CRC Design
 =======
 
-###Class 1
+###RPS
+**Responsibilities**
+
+* createRules(String fileName) returns Rules
+* createWeaponSet(String fileName) returns WeaponSet
+* createPlayers(int numPlayers) returns List<Players>
+* startGame(Rules r, WeaponSet w, List<Players> p) returns Player (winner)
+
+**Colaborators**
+
+* Rules
+* WeaponSet
+* Player
+
+###Game
+**Responsibilities**
+
+* createPlayers() return: void
+* simulateRound(Player p1, Player p2) return: void
+* resetGame() return: void
+* Plays game between players
+* Initiates new rounds
+
+**Collaborators**
+
+* Players
+* Rules
+
+###Rules
+**Responsibilities**
+*addRule(Weapon w1, Weapon w2) return void
+*deleteRule(Weapon w1, Weapon w2) return void
+*getWinner(Weapon w1, Weapon w2) return int outcome (-1, 0, 1)
+
+**Collaborators**
+
+* Weapons
+
+###Player
+**Responsibilities**
+* getScores() return int
+* updateScore(Int result) return void
+* chooseWeapon() return Weapon
+* resetScore() return void
 
 
-###Class 2
+**Collaborators**
+*WeaponSet
+
+###WeaponSet
+**Responsibilities**
+
+* getWeaponList() returns List<Weapon>
+* Updates enum based on input data file
+* addWeapon(Weapon w) return void
+* deleteWeapon(Weapon w) return void
+
+**Collaborators**
+
+* Weapon
+
+###Weapon
+**Responsibilities**
+
+* getWeaponName() return String
+
+
+**Collaborators**
+* WeaponSet
+* Rules
 
 You can add images as well:
 
@@ -44,4 +120,3 @@ You can put blocks of code in here like this:
         return total;
     }
 ```
-
