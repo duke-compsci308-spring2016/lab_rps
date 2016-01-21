@@ -47,7 +47,8 @@ You can add images as well:
 Use Cases
 =======
 
-You can put blocks of code in here like this:
+Used Raghav, Austin, Frank's group's CRC cards (atw15):
+
 ```java
     public class Game {
 	private final Player player1;
