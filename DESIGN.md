@@ -12,8 +12,8 @@ CompSci 308 : RPS Design
 ### Game class 
 * constructor will load file and populate hash maps
 * variables:
-    * private Map<String, List<String>> weaponBeats;
-    * private Map<String, List<String>> weaponLosesTo;
+    * private Map<String, Set<String>> weaponBeats;
+    * private Map<String, Set<String>> weaponLosesTo;
     * private User myUser;
     * private final AI myAI;
     * private Timer myTurnTimer;
@@ -26,8 +26,8 @@ CompSci 308 : RPS Design
 
 ### AI class
  	
-	* private List<String> UsersPastMoves;
-	* chooseMove(); algorithm to choose weapon based on UsersPastMoves
+	* private List<String> usersPastMoves;
+	* chooseMove(); algorithm to choose weapon based on usersPastMoves
 	* updateData(String move); updates data structure storing data regarding player's previous moves  
 
 CRC Design
