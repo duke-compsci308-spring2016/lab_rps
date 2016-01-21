@@ -35,21 +35,62 @@ Initial Design
 
 CRC Design
 =======
-(image3.JPG)
-(crc-example.png "Our CRC cards")
+
+###Class 1: Game
+* Player player1
+* Player player2
+* WeaponList wl
+
+* newGame() -> returns void
+* initializePlayer(String name) ->returns Player
+* readFile(File f) -> returns WeaponList
+* playRoundAndUpdateScore(Player player1, Player player2) -> returns void
+* chooseWeapon(Player player) -> returns void
 
 
-Use Cases
+###Class 2: Player
+*String name
+*int score
+*String weapon
+
+*resetScore() -> returns void
+*incrementScore() -> returns void
+*setWeapon(String w) -> returns void
+
+
+###Class 3: WeaponList
+*ArrayList<String> weapons
+*ArrayList<ArrayList<Integer>> outcomeMatrix
+
+*addWeapon(string Weapon, Set<String> thingsItBeats) -> returns void
+
+
 =======
+To create a new player:
 
-You can put blocks of code in here like this:
 ```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
+    public void initializePlayer(String name) {
+        Player player1 = new Player();
+        player1.name = name;
+        player1.score = 0;
+        return;
+```
+
+To add weapon and update relationships:
+```java
+    addWeapon(string newWeapon, Set<String> thingsItBeats) {
+        weapons.add(newWeapon);
+        outcomeMatrix.add(new ArrayList<Integer>);
+        for (int i = 0; i < weapons.size(); i++) {
+            if thingsItBeats.contains(weapons.get(i)) {
+                outcomeMatrix.get(outcomeMatrix.size()-1]).get(i) = 1;
+                outcomeMatrix.get(i).add(-1);
+            }
+            else {
+                outcomeMatrix.get(outcomeMatrix.size()-1]).get(i) = -1;
+                outcomeMatrix.get(i).add(1);
+            }
         }
-        return total;
     }
 ```
 
