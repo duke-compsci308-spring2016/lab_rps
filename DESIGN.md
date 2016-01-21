@@ -10,7 +10,6 @@ Initial Design
 ###Weapon
 
 * General class for each weapon, doesn’t store what it beats/what beats it
-* Knows weapon display attributes
 
 ###WeaponSet
 
@@ -31,26 +30,10 @@ Initial Design
 CRC Design
 =======
 
-###RPS
-**Responsibilities**
-
-* createRules(String fileName) returns Rules
-* createWeaponSet(String fileName) returns WeaponSet
-* createPlayers(int numPlayers) returns List<Players>
-* startGame(Rules r, WeaponSet w, List<Players> p) returns Player (winner)
-
-**Colaborators**
-
-* Rules
-* WeaponSet
-* Player
-
 ###Game
 **Responsibilities**
 
-* createPlayers() return: void
-* simulateRound(Player p1, Player p2) return: void
-* resetGame() return: void
+* Knows Players in match
 * Plays game between players
 * Initiates new rounds
 
@@ -61,9 +44,12 @@ CRC Design
 
 ###Rules
 **Responsibilities**
-*addRule(Weapon w1, Weapon w2) return void
-*deleteRule(Weapon w1, Weapon w2) return void
-*getWinner(Weapon w1, Weapon w2) return int outcome (-1, 0, 1)
+
+* Knows win/loss rules (store in directed graph)
+* Add rule
+* Change rule
+* Delete rule
+* Return winner between weapons
 
 **Collaborators**
 
@@ -71,22 +57,22 @@ CRC Design
 
 ###Player
 **Responsibilities**
-* getScores() return int
-* updateScore(Int result) return void
-* chooseWeapon() return Weapon
-* resetScore() return void
-
+* Knows score
+* Updates scores
+* Selects weapon from weapon set
+* Resets score
 
 **Collaborators**
-*WeaponSet
+
+* WeaponSet
 
 ###WeaponSet
 **Responsibilities**
 
-* getWeaponList() returns List<Weapon>
+* Knows all weapons
 * Updates enum based on input data file
-* addWeapon(Weapon w) return void
-* deleteWeapon(Weapon w) return void
+* Add weapon
+* Delete Weapon
 
 **Collaborators**
 
@@ -95,10 +81,11 @@ CRC Design
 ###Weapon
 **Responsibilities**
 
-* getWeaponName() return String
+* Knows display attributes
 
 
 **Collaborators**
+
 * WeaponSet
 * Rules
 
@@ -120,41 +107,41 @@ startGame(rules, weaponset, newPlayers);
 * A player chooses his RPS "weapon" with which he wants to play for this round.
 
 ```java
-	Weapon chooseWeapon(){
-
-}
+// In Game class
+// Assuming Player player
+Weapon w = player.chooseWeapon();
 
 ```
 * Given two players' choices, one player wins the round, and their scores are updated.
 
 ```java
+// In Game class
 int getWinner(Player p1, Player p2){
-	//compare weapons
-	//1 - p1 weapon wins, 0 - tie, -1 p2 weapon wins
+    //compare weapons
+    //1 - p1 weapon wins, 0 - tie, -1 p2 weapon wins
 }
-
-
 
 ```
 * A new choice is added to an existing game and its relationship to all the other choices is updated.
 ```java
+// In Game class
 Weapon newChoice = new Weapon(name);
 weaponset.addWeapon(newChoice);
 // Assume choices it beats is in List<Weapon> winners -> from input file
 // Assume choices it loses to is in List<Weapon> losers -> from input file
 for(Weapon w: winners){
-	rules.addRule(newChoice, w); // Winning choice comes first
+    rules.addRule(newChoice, w); // Winning choice comes first
 }
 for(Weapon w: losers){
-	rules.addRule(w, newChoice); 
+    rules.addRule(w, newChoice); 
 }
 ```
 * A new game is added to the system, with its own relationships for its all its "weapons".
 ```java
-resetGame()
-// Assuming Rule r, WeaponSet w, Player p
-startGame(r, w, p)
+// In RPS class
+// Assuming Game g
+game.resetGame()
+// Assuming Rules rules
+game.updateRules(rules)
 ```
-
-
 
