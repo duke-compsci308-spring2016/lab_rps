@@ -5,6 +5,27 @@ CompSci 308 : RPS Design
 [Lab - RPS](http://www.cs.duke.edu/courses/compsci308/spring16/classwork/02_design_rps/index.php)
 
 Initial Design
+
+Main class - instantiates instance of a game and launches the game
+    
+Game class - constructor will load file and populate hash maps
+    private HashMap<String, Array<String>> weaponBeats;
+    private HashMap<String, Array<String>> weaponLosesTo;
+    private User myUser;
+    private AI myAI;
+    private Timer myTurnTimer;
+	public void init(); call loadWeaponInfo, create player, create AI, prompt user for choice, scheduleTurnTimer
+	    private void loadWeaponInfo(textfile text); parses text file with weapon info and populates the hashmaps weaponBeats and weaponLosesTo
+	    private void createPlayers(); creates user object and AI object
+	
+	public void updateAI(); update myAI's UsersPastMoves structure
+	scheduleTurnTimer(); schedules the turn timer, once timer expires have both players' choices show, then schedule new timer and prompt user for choice
+	
+AI class
+    private ArrayList<String> UsersPastMoves;
+    chooseMove(); algorithm to choose weapon based on UsersPastMoves
+        
+
 =======
 
 ###Class 1
