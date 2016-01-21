@@ -70,22 +70,12 @@ CRC Design
 * public int compareWeap(String key1, String key2)// returns 0 if tie, 1 if weapon1 wins, 2 if weapon2 wins
 
 ##Class 4 - Player
-*int Score, id
-*String name
-*public void setScore(int score)
-*public int getScore()
+* int Score, id
+* String name
+* public void setScore(int score)
+* public int getScore()
 
 Use Cases
 =======
-
-You can put blocks of code in here like this:
-```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
-    }
-```
+* We ran out of time before getting to these.
 
