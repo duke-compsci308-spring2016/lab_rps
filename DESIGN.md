@@ -12,7 +12,7 @@ Public methods (parameters & return value)
 > **Comparator Class:**
 > - Takes in both player's selection
 > - Assumes every single hand has to be an object
-> - the Comparator class takes in two objects, and decides the winner based on the relative value between the two objects through some sort of algorithm. This class will have the compareTo class that will compare the objects accordingly.
+> - The Comparator class takes in two objects, and decides the winner based on the relative value between the two objects through some sort of algorithm. This class will have the compareTo class that will compare the objects accordingly.
 
 
 ---------------------
@@ -20,12 +20,12 @@ Public methods (parameters & return value)
 > **Game Class:**
 > - Game class generates screen to fit into generate scene method.
 > - Generate scene method:
-> - takes in current state that we are in 
-> - begins with splash state
-> - calls method to call next state
-> - loads next state 
+> - Takes in current state that we are in 
+> - Begins with splash state
+> - Calls method to call next state
+> - Loads next state 
 > - (choosing state)
-> - after choosing state, game decides who won and displays win screen
+> - After choosing state, game decides who won and displays win screen
 
 ---------------------
 
