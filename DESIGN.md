@@ -17,8 +17,8 @@ CRC Design
 ####Attributes
 
 * String myName
-* Set<Weapon> beatsMe
-* Set<Weapon> iBeatThem
+* Set of Weapons beatsMe
+* Set of Weapons iCanBeat
 
 ####Methods
 
@@ -33,7 +33,7 @@ CRC Design
 * Player player2
 * int player1Score
 * int player2Score
-* Set<Weapon> legalWeapons
+* Set of Weapon legalWeapons
 
 ####Methods
 
