@@ -20,20 +20,17 @@ Public methods (parameters & return value)
 > **Game Class:**
 > - Game class generates screen to fit into generate scene method.
 > - Generate scene method:
-takes in current state that we are in 
-begins with splash state
-calls method to call next state
-loads next state 
-(choosing state)
-after choosing state
-game decides who won
-displays win screen
+> - takes in current state that we are in 
+> - begins with splash state
+> - calls method to call next state
+> - loads next state 
+> - (choosing state)
+> - after choosing state, game decides who won and displays win screen
 
 ---------------------
 
 > **Object Class:**
-OO for selecting the move
-name property. This class has a move method that returns the move name selected.
+> - OO for selecting the move name property. This class has a move method that returns the move name selected.
 
 
 ---------------------
