@@ -7,24 +7,49 @@ CompSci 308 : RPS Design
 Initial Design
 =======
 
-###Class 1
+###Controller
 
-* Bullets are made with asterisks
-
-1. You can also order things with numbers
+Contains the game's info (player scores, win conditions, etc.). Main liason with the UI
 
 
-###Class 2
 
 
+###Battle Matrix
+
+Contains the main weapon relationships structure. It takes in what the controller has, and computes the actual win/loss/draw.
+
+###Player
+
+Contains score and name
 
 CRC Design
 =======
 
-###Class 1
+###Controller
 
+void resetGame(): Updates players' scores to 0.
 
-###Class 2
+void receivePlayerChoices( int weapon1, int player ): receives the player's choice from the UI, and stores it. When both players have chose, it calls BattleMatrix's *checkWinner* and *incrementScore* afterwards.
+
+void receiveRelationships(FILE): takes new File from UI and directs it to BattleMatrix class.
+
+###BattleMatrix
+
+void setMatrix(FILE): gets the file and creates/updates the relationship matrix.
+
+void resetMatrix(): Wipes the matrix clean, to start a new game
+
+int checkWinner( int weapon1, int weapon2 ): takes the weapon choices, looks up the table and gives the winner as output (-1, 0 or 1 for player 1 loss, draw and win, respectively).
+
+###Player
+
+void incrementScore(): score++
+
+void resetScore(): score = 0
+
+int getScore(): return score.
+
+Simple enough.
 
 You can add images as well:
 
@@ -34,14 +59,50 @@ You can add images as well:
 Use Cases
 =======
 
-You can put blocks of code in here like this:
+•  New game starts, score reset
 ```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
-    }
+    resetGame();
+   
+    resetMatrix();
 ```
+
+• New player chooses RPS weapon
+```java
+	receivePlayerChoices( weapon, player );
+```
+
+• Given 2 choices, one player wins and scores are updated
+```java
+	receivePlayerChoices( weapon, player );
+	receivePlayerChoices( weapon, player );
+
+	checkWinner( weapon1, weapon2 );
+
+	incrementScore();
+```
+
+• A new choice is added
+```java
+	receiveRelationships(FILE);
+
+	setMatrix(FILE);
+```
+
+• A new game is added
+```java
+	resetGame();
+	receiveRelationships(FILE);
+
+	resetMatrix();
+	setMatrix(FILE);
+```
+
+
+
+
+
+
+
+
+
 
