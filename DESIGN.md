@@ -12,7 +12,7 @@ Public methods (parameters & return value)
 > **Comparator Class:**
 Takes in both player's selection
 Assumes every single hand has to be an object
-the Comparator class takes in two objects, and decides the winner based on the relative value between the two objects through some sort of algorithm
+the Comparator class takes in two objects, and decides the winner based on the relative value between the two objects through some sort of algorithm. This class will have the compareTo class that will compare the objects accordingly.
 
 
 ---------------------
