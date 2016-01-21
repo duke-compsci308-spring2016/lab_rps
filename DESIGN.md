@@ -1,6 +1,10 @@
 CompSci 308 : RPS Design
 ===================
 
+Timothy Blumberg
+Madhav Kumar
+Shae von Wagoner
+
 > This is the link to the Lab Description:
 [Lab - RPS](http://www.cs.duke.edu/courses/compsci308/spring16/classwork/02_design_rps/index.php)
 
