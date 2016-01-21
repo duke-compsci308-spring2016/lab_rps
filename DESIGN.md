@@ -56,12 +56,58 @@ Use Cases
 
 You can put blocks of code in here like this:
 ```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
-    }
+    public class Main{
+    	public static void main(String [] args){
+    		Scanner in = new Scanner(new File("gameFile.txt"));
+    		HashMap<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
+    		while(in.hasNextLine()){
+    			HashSet<String> set = new HashSet<String>();
+    			String line = in.nextLine();
+    			String[] data = line.split("\\s+");
+    			for(int i = 1;i < data.length;i++){
+    				set.add(data[i]);
+    			}
+    			map.put(data[0], set);
+    		}
+    		Game g = new Game(map);
+    		g.begin();
+    	}
+	}
+	public class Game{
+		private HashMap<String, HashSet<String>> loseSet;
+		private String getWinner(String choice1, String choice2){
+			if(choice1.equals(choice2)){
+				return "";
+			}
+			else if(loseSet.get(choice1).contains(choice2)){
+				return choice1;
+			}
+			else if(loseSet.get(choice2).contains(choice1)){
+				return choice2;
+			}
+			return "";
+		}
+		public Game(HashMap<String, HashSet<String>> l){
+			loseSet = l;
+		}
+		public void begin(){
+			while(1){
+				System.out.println("Enter 2 choices");
+				Scanner in = new Scanner(System.in);
+				String c1 = in.next();
+				String c2 = in.next();
+				if(!getWinner(c1, c2).equals("")){
+					System.out.println(getWinner(c1, c2));
+				}
+				else{
+					System.out.println("Tie");
+				}
+			}
+		}
+
+	}
 ```
+
+
+
 
