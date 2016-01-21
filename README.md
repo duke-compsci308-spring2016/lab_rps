@@ -7,9 +7,9 @@ Method Overview
 
 Our implementation of the RPS-n game organizes combinations of weapons using a map of strings, one for each of the n options, mapped to a set of strings, made up of all of the options that the particular weapon defeats. 
 
-There are three classes within our project- a RPS class that stores the game with all n weapon options, a player class which handles inputs, and a main class to act as an interface between the player and the game’s mechanics.
+There are three classes within our project- a RPS class that stores the game with all n weapon options, a player class which handles inputs, and a main class to act as an interface between the player and the gameâ€™s mechanics.
 
-Users will select one weapon each, which will be stored as the player’s weapon attribute. RPS class will have methods that take in the players as inputs and determine the outcome of the game. The game play will be handled by first seeing if the two inputs are the same (report tie), then getting player 1’s move and seeing if it maps to player 2’s move (report win), then getting player 2’s move and seeing if it maps to player 1’s move (report win), and finally reporting a tie.
+Users will select one weapon each, which will be stored as the playerâ€™s weapon attribute. RPS class will have methods that take in the players as inputs and determine the outcome of the game. The game play will be handled by first seeing if the two inputs are the same (report tie), then getting player 1â€™s move and seeing if it maps to player 2â€™s move (report win), then getting player 2â€™s move and seeing if it maps to player 1â€™s move (report win), and finally reporting a tie.
 
 **RPS Class**
 
@@ -51,25 +51,25 @@ This class handles player inputs and scores
 
 >public class Player{
 
->private String myMove; //The player’s current move
->private int myScore = 0;;	  //The player’s score
+>private String myMove; //The playerâ€™s current move
+>private int myScore = 0;;	  //The playerâ€™s score
 >private String myName; 
 
 Initializes player and sets name
 >public Player(String name){
 >}
 
-Updates the player’s current move based on the input string next
+Updates the playerâ€™s current move based on the input string next
 >public void updateMove(String next){}
 >}
 
 Returns the current move based on user input via a button or console input
 >public String getMove(){}
 
->//Increments the player’s score
+>//Increments the playerâ€™s score
 >public void incScore(){}
 
->//Returns the player’s name
+>//Returns the playerâ€™s name
 >public String getName(){}
 
 >}
@@ -82,7 +82,7 @@ The GamePlay class handles starting the game, taking in weapon inputs to assign 
 	
 >private Player p1 = new Player();
 >private Player p2 = new Player(); 
->private RPS myRPS = new RPS(“filename.txt”);
+>private RPS myRPS = new RPS(â€œfilename.txtâ€);
 	
 This method listens for actions as players make their moves, and update p1 and p2 using moves
 >public void listen(){}
@@ -94,3 +94,23 @@ The main method initializes players and RPS instances and begins the initializat
 >public static void main(String[] args){
 	
 >}
+
+**Use Case**
+
+Play method: Takes in 2 players from teh gameplay class, and returns which one wins based on their current states and optionsMap
+
+>public Player play(Player in1, Player in2){
+>move1 = in1.getMove();
+>move2 = in2.getMove();
+
+>if(move1 == move2)
+>	return null;
+	
+>if(optionsMap.get(move1).contains(move2)
+>	return in1;
+>if(optionsMap.get(move2).contains(move1)
+>	return in2;
+		
+>return null;	
+>}
+
