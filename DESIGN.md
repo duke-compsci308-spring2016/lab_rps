@@ -3,20 +3,46 @@ CompSci 308 : RPS Design
 
 > This is the link to the Lab Description: 
 [Lab - RPS](http://www.cs.duke.edu/courses/compsci308/spring16/classwork/02_design_rps/index.php)
-
+atw15, fxw, rk145
+Austin Wu, Frank Wang, Raghav Kedia
 Initial Design
 =======
 
-###Class 1
+###Game Class
 
-* Bullets are made with asterisks
+*Instance Variables
+**Player player1
+**Player player2
+**ArrayList<Weapon> weaponlist 
+**int numberOfRounds rounds
+*Methods
+**void playRound()
 
-1. You can also order things with numbers
+###Weapon Class
+*Variables
+**String name
+*Methods
+**String getName()
+**void setName(String s)
+**Collection<String> getBeatable()
+**void setBeatable(Collection<String> list)
+**void addBeatable(String s)
+**int compare(Weapon otherweapon)
 
-
-###Class 2
-
-
+###Player Class
+*Variables
+**String name
+**Weapon weapon
+**int wins, losses
+*Methods
+**String getName()
+**void setName(String s)
+**int getWins()
+**void setWins(int n)
+**int getLosses()
+**void setLosses(int n)
+**void setWeapon(Collection<Weapon> weaponList)
+**Weapon getWeapon()
 
 CRC Design
 =======
