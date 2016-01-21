@@ -4,25 +4,57 @@ CompSci 308 : RPS Design
 > This is the link to the Lab Description: 
 [Lab - RPS](http://www.cs.duke.edu/courses/compsci308/spring16/classwork/02_design_rps/index.php)
 
-Initial Design
-=======
-
-###Class 1
-
-* Bullets are made with asterisks
-
-1. You can also order things with numbers
-
-
-###Class 2
-
-
-
 CRC Design
 =======
 
-###Class 1
+###Weapon
 
+* Defined by the name (ie. "Rock")
+
+####Responsibilities
+
+* To keep track of what weapons beat this one
+
+* To keep track of what weapons this one beats
+
+####Attributes
+
+* String myName
+
+* Set<Weapon> beatsMe
+
+* Set<Weapon> iBeatThem
+
+###Game
+
+####Attributes
+
+* Player player1
+
+* Player player2
+
+###Round
+
+####Responsibilities
+
+* Keep track of weapons chosen by both players
+
+* Determine a winner for the round
+
+####Atributes
+
+* Weapon player1Weapon
+
+* Weapon player2Weapon
+
+####Methods
+
+* Need to determine if both weapons selected
+
+* Need to determine winner
+
+
+<!-- 
 
 ###Class 2
 
@@ -45,3 +77,4 @@ You can put blocks of code in here like this:
     }
 ```
 
+ -->
