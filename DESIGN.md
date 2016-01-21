@@ -40,19 +40,19 @@ name property. This class has a move method that returns the move name selected.
 
 
 > **Object Class:**
-Move 1: A new game is started with two players, their scores are reset to 0.
+> - Move 1: A new game is started with two players, their scores are reset to 0.
 	- Class: Game class
 	- Method: Generate Scene method
-Move 2: A player chooses his RPS "weapon" with which he wants to play for this round.
+> - Move 2: A player chooses his RPS "weapon" with which he wants to play for this round.
 	- Class: Game Class
 	- Method: Choose Method
-Move 3: Given two players' choices, one player wins the round, and their scores are updated.
+> - Move 3: Given two players' choices, one player wins the round, and their scores are updated.
 	- Class: Game class
 	- Method:  Update Score Method
-Move 4: A new choice is added to an existing game and its relationship to all the other choices is updated.
+> - Move 4: A new choice is added to an existing game and its relationship to all the other choices is updated.
 	- Class: Object Class
 	- Method: Add Choice method
-Move 5: A new game is added to the system, with its own relationships for its all its "weapons".
+> - Move 5: A new game is added to the system, with its own relationships for its all its "weapons".
 	- Class: Game Class
 	- Method: Generate Scene method
 
