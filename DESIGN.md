@@ -46,11 +46,29 @@ Initial Design
 
 CRC Design
 =======
+We wrote usecases for the team of abz3's team's cards.
 
-###Class 1
+###Game
+*Variables
+**private Map<String, Set<String>>weaponBeats;
+**private User myUser;
+**private final AI myAI;
+**private Timer myTurnTimer;
+*Methods
+**public void init()
+**private void loadWeaponInfo(textfile text)
+**private void createPlayers()
+**public void updateAI()
+**private void scheduleTurnTimer()
 
+###Main
+*Methods
+**public void start()
 
-###Class 2
+###AI 
+*Methods
+**public void chaseMove();
+**public void updateData(String move);
 
 You can add images as well:
 
@@ -59,15 +77,48 @@ You can add images as well:
 
 Use Cases
 =======
-
-You can put blocks of code in here like this:
-```java
-    public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
-    }
+Use Case #1
+```
+start(){
+	Game newGame = new Game();
+	newGame.init();
+	newGame.createPlayers();
+	newGame.resetScores();
+}
+```
+Use Case #2
+```
+public void chooseWeapon(User user){
+	User.setWeapon(weaponBeats);
+}
 ```
 
+Use Case #3
+```
+public User compareChoices(User p1, User p2){
+	if (weaponBeats.get(p1.getWeapon()).equals(weaponBeats.get(p2.getWeapon())){
+		return p1;
+	}
+	if (weaponBeats.get(p2.getWeapon()).equals(weaponBeats.get(p1.getWeapon())){
+		return p2;
+	}
+	return null;
+}
+```
+Use Case #4
+```
+public void addChoice(String weapon, Set<String> relationships){
+	updateAll();
+}
+```
+
+Use Case #5
+```
+public Game addNewGame(textfile weaponinfo){
+	Game newGame = new Game();
+	newGame.init();
+	newGame.createPlayers();
+	newGame.resetScores();
+	newGame.loadWeaponInfo(weaponinfo);
+}
+```
