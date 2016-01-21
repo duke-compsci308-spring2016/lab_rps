@@ -1,4 +1,4 @@
-CompSci 308 : RPS Design
+CompSci 308 : RPS Design --- JJI3, REB36, SU26
 ===================
 
 > This is the link to the Lab Description: 
@@ -32,6 +32,7 @@ Initial Design
 * Will contain a method that takes in two actions and checks with the corresponding action classes in order to figure out the result of the game
 * This method will search the hashmaps to find the corresponding RPSAction classes in order to call the doesBeat methods on them, to determine the outcome of the game.
 * The output string will be stored in another list of strings to store game outcomes and print them, could create a gameOutcome class if needed
+* Will also update a the score of the game
 ```java
 	private HashMap<String, RPSAction> mapOfStringsToRules;
 	private List<String> listOfGameOutComes;
@@ -50,7 +51,14 @@ Initial Design
 	...
 	
 ```
-
+* Will have the necessary methods and data structures to reset and track the current state of the game
+```java
+	private int playerOnePoints , playerTwoPoints;
+	public void resetScore(){...};
+	public int reportPlayerOneScore(){...};
+	public int reportPlayerTwoScore(){...};
+	
+```
 
 ###RPSAction
 * Each instance of this class will have a variable that can be used to identify which action it is (ie. rock, paper etc...) which will be set upon creation of rule
