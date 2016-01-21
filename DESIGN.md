@@ -10,29 +10,51 @@ CompSci 308 : RPS Design
 ###Class: Weapon
 
 * A class that can be instantiated for any weapon based on what is fed into the constructor
-* Methods:
+
+Methods:
 ```java
+//Used for updating the inter-weapon game dynamics
 public void addBeats(Weapon beatWeapon)
-public void addAllBeats(List<Weapon> beatWeapons)
-public void addLoss(Weapon loseWeapon)
-public void addAllLosses(List<Weapon> loseWeapons)
+
+//Determines the result when two weapons are played against each other
+public boolean doesBeat(Weapon otherWeapon)
 ```
+Instance Variables:
+`List<Weapon> beats`
+
 
 ###Class: Player
 
 * Represents each game player
 * Will be able to determine which weapon it would like to throw
-* Methods:
+
+Methods:
 ```java
-public Weapon throw()
+//Generates a Weapon that the user throws
+public Weapon pickWeapon()
+
+//Gets the players current score
 public int getScore()
+public boolean doesBeat(Player otherPlayer)
+public Weapon getCurrentWeapon()
+public void setScore(int score)
 ```
+Instance Variables:
+`Weapon currentWeapon`
+`int myScore`
+`List<Weapon> priorThrows`
 
 ###Class: Game
 * The central game class
 * Will have to have an initialization method(s) where it properly configures which weapons beat which other weapons
-* Controls the GUI
-* Methods:
+
+Methods:
 ```java
-public void start();
+//Starts the game and generates the GUI
+public void start()
 ```
+
+Instance Variables:
+`int roundsElapsed`
+`List<Player> players`
+`List<Weapon> weapons`
