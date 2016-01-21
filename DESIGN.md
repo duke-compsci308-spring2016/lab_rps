@@ -83,7 +83,13 @@ Initial Design
 * Will create a GUI and allow for user input
 * Will report the results of games as calculated by RPS Game Class
 
-
+###Use Case Example
+* We will try now to update a rule
+```java
+	//the lists that define the new rule come from the user input or a file
+	RPSAction newRule = new RPSAction("car", listOfThingsThatCarBeats);
+	ourRPSGame.addNewRule(newRule, listOfThingsThatBeatsCar);
+```
 
 CRC Design
 =======
