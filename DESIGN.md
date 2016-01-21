@@ -18,7 +18,7 @@ the Comparator class takes in two objects, and decides the winner based on the r
 ---------------------
 
 > **Game Class:**
-Game class generates screen to fit into generate scene method
+Game class generates screen to fit into generate scene method.
 Generate scene method:
 takes in current state that we are in 
 begins with splash state
