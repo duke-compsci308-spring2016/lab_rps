@@ -15,7 +15,7 @@ Player knows its:
 * name
 * currentWeapon
 Methods: 
-*setWeaponChoice
+* setWeaponChoice
 
 ###UserPlayer Class
 
@@ -26,20 +26,20 @@ UserClass will implement the player class.  It will be used for human users.
 ComputerPlayer will implement the player class.  It will be for cpu challengers.  In addition to the player
 class' capabilities it will need a decision making capability. 
 ComputerPlay has:
-*difficulty
+* difficulty
 Methods:
-**makeNextMoveDecision
+* makeNextMoveDecision
 
 ###Weapon Class
 
 Defines the general structure for a weapon
 Contains:
-*name
-*Image
-*weaponID [constant that identifies the different type of weapons]
+* name
+* Image
+* weaponID [constant that identifies the different type of weapons]
 
 Methods-
--show [displays the image of the screen]
+* show [displays the image of the screen]
 
 ###Main Class
 
@@ -47,8 +47,8 @@ Initializes the game, passes the input data to the information engine to process
 generates a new GamePlay class (depending on whether the players are human or cpu) with the given information
 engine 
 methods:
--readInput [gets the input]
--main method
+* readInput [gets the input]
+* main method
 
 ###GamePlay Class
 
@@ -57,22 +57,22 @@ The game loop will:
 1. Update the player weapon choice
 2. play 
 3. updatePlayer
-Methods-
+Methods:
 shoot [makes a choice on which players' weapon wins] 
 updatePlayer [updates the player state] 
 
 The Game Class will have:
-*2 Players (it should be able to handle different type of players; both CPU and User)
-*DataEngine
+* 2 Players (it should be able to handle different type of players; both CPU and User)
+* DataEngine
 
 
 ##DataEngine 
 
 Loads the input data and creates the algorithm to determine which weapon beats another
 It will contain the instances of the weapons and give out information useful for the GamePlay Class
-Methods-
-*generateGraph
-*getWinner (Weapon1, weapon2) [Uses the graph to determine the winner between the two weapons]
+Methods:
+* generateGraph
+* getWinner (Weapon1, weapon2) [Uses the graph to determine the winner between the two weapons]
 CRC Design
 
 =======
