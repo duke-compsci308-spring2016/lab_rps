@@ -29,7 +29,7 @@ Initial Design
 
 * Main method 
 	- reads in stuff from file 
-	- creates the RPS Choice objects and adds to HashMap
+	- creates the RPS Choice objects and adds to HashMap (Should map Strings to HashSet<String>)
 	- initializes new instance of Game Class with HashMap
 	- game.begin() starts the game loop
 
