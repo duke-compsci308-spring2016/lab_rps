@@ -15,20 +15,20 @@ Player knows its:
 * name
 * currentWeapon
 Methods: 
--setWeaponChoice
+*setWeaponChoice
 
 ###UserPlayer Class
 
 UserClass will implement the player class.  It will be used for human users.  
 
-##ComputerPlayer Class
+###ComputerPlayer Class
 
 ComputerPlayer will implement the player class.  It will be for cpu challengers.  In addition to the player
 class' capabilities it will need a decision making capability. 
 ComputerPlay has:
 *difficulty
 Methods:
--makeNextMoveDecision
+**makeNextMoveDecision
 
 ###Weapon Class
 
