@@ -16,6 +16,8 @@ Initial Design
  	private void newRound()
 	private void endGame()
 	private void reset()
+	private Weapon chooseWeapon()
+	private void showWinner(Player player1, Player player2);
 '''
 * loadUI() is responsible for generating the user interface for the game.
 * loadWeaponsData(File weaponData) is responsible for reading a file of weapons and creating a map with relationships between weapons in the form of a Map.
@@ -36,23 +38,19 @@ Initial Design
 
 ###Player
 '''java
-	public Player(int score, Weapon weaponChoice)
+	public Player(int score)
+	public Weapon getWeapon();
+	public void addScore(int score);
 '''
-* Player(int score, Weapon weaponChoice) is a constructor that initializes a weapon with a score and the weapon of choice.
+* Player(int score) is a constructor initializes with a score
 
 
 CRC Design
 =======
 
-###Class 1
-
-
-###Class 2
-
-You can add images as well:
-
-![This is cool, too bad you can't see it](crc-example.png "Our CRC cards")
-
+![This is cool, too bad you can't see it](IMG_9844.JPG "Our CRC cards")
+![This is cool, too bad you can't see it](IMG_9845.JPG "Our CRC cards")
+![This is cool, too bad you can't see it](IMG_9846.JPG "Our CRC cards")
 
 Use Cases
 =======
@@ -60,11 +58,18 @@ Use Cases
 You can put blocks of code in here like this:
 ```java
     public int getTotal (Collection<Integer> data) {
-        int total = 0;
-        for (int d : data) {
-            total += d;
-        }
-        return total;
+        Player p1 = new Player(0);
+        Player p2 = new Player(0);
+        startRound();
+        int win = p1.getWeapon().compareTo(p2.getWeapon());
+        if (win == 1) {
+        	p1.addScore(1);
+        } else if (win == -1){
+        	p2.addScore(1);
+        }      
+        showWinner(p1, p2);
     }
 ```
+
+''
 
